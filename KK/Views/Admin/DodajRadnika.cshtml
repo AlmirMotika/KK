@@ -1,0 +1,19 @@
+﻿@model KK.ViewModels.AdminVM.DodajRVM
+<h1>Dodaj Radnika</h1>
+<form asp-controller="Admin" asp-action="DodajRadnika" method="post">
+    <input type="text" name="ime" asp-for="Ime" placeholder="Ime" />
+    <input type="text" name="prezime" asp-for="Prezime" placeholder="Prezime" />
+    <input type="text" name="datumRodjenja" asp-for="DatumRodjenja" placeholder="Datum rođenja" />
+    <input type="text" name="JMBG" asp-for="JMBG" placeholder="JMBG" />
+
+    <select asp-for="GradID" asp-items="@Model.Gradovi">
+        <option value="" selected disabled>Grad</option>
+    </select>
+    <select asp-for="RadnikKID" asp-items="@Model.RadnikK">
+        <option value="" selected disabled>Kvalifikacija</option>
+    </select>
+    <input type="submit" value="Snimi" />
+
+
+
+</form>

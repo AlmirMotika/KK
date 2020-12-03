@@ -1,0 +1,11 @@
+﻿@model KK.ViewModels.AdminVM.TipVozilaVM
+
+<h1>Uredi tip : @Model.Naziv</h1>
+<form asp-action="UrediTipVozila">
+    <label asp-for="Naziv"></label>
+    <input asp-for="Naziv" />
+    <label asp-for="BrojSjedista"></label>
+    <input asp-for="BrojSjedista" />
+    <input type="submit" value="Snimi" class="btn btn-primary" />
+</form>
+<p><a asp-action="TipVozila">Nazad na tipove vozila</a></p>

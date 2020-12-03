@@ -1,0 +1,27 @@
+﻿@model IEnumerable<KK.ViewModels.AdminVM.TipVozilaVM>
+
+<h1>Tipovi vozila</h1>
+<p><a href="/Admin/DodajTipVozila" class="btn btn-success">Dodaj tip</a></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Naziv</th>
+            <th>Broj Sjedišta</th>
+        </tr>
+       
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ID)</td>
+            <td>@Html.DisplayFor(modelItem => item.Naziv)</td>
+            <td>@Html.DisplayFor(modelItem => item.BrojSjedista)</td>
+            <td>@Html.ActionLink("Uredi","UrediTipVozila",new { id = item.ID },new { @class = "btn btn-primary" })|
+            @Html.ActionLink("Brisi","BrisiTV",new { id = item.ID },new { @class = "btn btn-danger" })</td>
+        </tr>
+        }
+    </tbody>
+</table>

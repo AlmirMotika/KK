@@ -1,0 +1,9 @@
+﻿@model KK.ViewModels.AdminVM.DrzavaVM
+
+<h1>Dodaj novu Državu</h1>
+<form asp-action="DodajDrzavu">
+    <label asp-for="Naziv" class="control-label"></label>
+    <input asp-for="Naziv" class="form-control" />
+    <input type="submit" value="Snimi" class=" btn btn-primary" />
+</form>
+<div><a asp-action="Drzave">Nazad na listu</a></div>

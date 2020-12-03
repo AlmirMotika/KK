@@ -1,0 +1,38 @@
+﻿@model IEnumerable<KK.ViewModels.LinijaVM.LinijaVM>
+<h1>Linije</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Polaziste</th>
+            <th>Odrediste</th>
+            <th>Vrijeme polaska</th>
+            <th>Vrijeme dolaska</th>
+            <th>Duzina putovanja</th>
+            <th>Linija</th>
+            <th>Cijena</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ID)</td>
+                <td>@Html.DisplayFor(modelItem => item.Polaziste)</td>
+                <td>@Html.DisplayFor(modelItem => item.Odrediste)</td>
+                <td>@Html.DisplayFor(modelItem => item.VrijemePolaska)</td>
+                <td>@Html.DisplayFor(modelItem => item.VrijemeDolaska)</td>
+                <td>@Html.DisplayFor(modelItem => item.DuzinaPutovanja)</td>
+                <td>@Html.DisplayFor(modelItem => item.TipLinije)</td>
+                <td>@Html.DisplayFor(modelItem => item.Cijena)</td>
+                <td>
+                    @Html.ActionLink("Kupi", "KupiKartu", new { id = item.ID }, new { @class = "btn btn-success" })|
+              
+            </td>
+
+
+        </tr>
+    }
+    </tbody>
+</table>

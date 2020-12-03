@@ -1,0 +1,12 @@
+﻿@model KK.ViewModels.AdminVM.RadnikKvalifikacijaVM
+
+<h1>Dodaj Radnik kvalifikaciju</h1>
+
+<form asp-action="DodajRadnikK">
+    <label asp-for="Opis"></label>
+    <input asp-for="Opis" />
+    <label asp-for="CV"></label>
+    <input asp-for="CV" />
+    <input type="submit" value="Snimi" class="btn btn-primary" />
+</form>
+<div><a asp-action="RadnikKvalifikacije">Nazad na radnik kvalifikacije</a></div>

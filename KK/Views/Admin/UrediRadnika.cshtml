@@ -1,0 +1,15 @@
+﻿@model KK.ViewModels.AdminVM.DodajRVM
+
+<h1>Uredi radnika : @Model.Ime @Model.Prezime</h1>
+
+<form asp-controller="Admin" asp-action="UrediRadnika" method="post">
+    <input name="ime" asp-for="Ime" type="text" />
+    <input name="prezime" asp-for="Prezime" type="text" />
+    <input name="datumrodjenja" asp-for="DatumRodjenja" type="text" />
+    <input name="JMBG" asp-for="JMBG" type="text" />
+    <select asp-for="GradID" asp-items="@Model.Gradovi"></select>
+    <select asp-for="RadnikKID" asp-items="@Model.RadnikK"></select>
+    <input type="submit" value="Snimi" class="btn btn-primary"/>
+
+</form>
+<p><a asp-action="Radnici">Nazad na Radnike</a></p>

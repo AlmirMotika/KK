@@ -1,0 +1,33 @@
+﻿@model IEnumerable<KK.ViewModels.AdminVM.DrzavaVM>
+
+<h1>Države</h1>
+
+<p><a href="/Admin/DodajDrzavu" class="btn btn-success">Dodaj novu državu</a></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width:50%">
+                ID
+            </th>
+            <th>
+                Naziv
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem=>item.Id)</td>
+                <td>@Html.DisplayFor(modelItem=>item.Naziv)</td>
+                <td>
+                    @Html.ActionLink("Uredi", "UrediDrzavu", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Briši", "BrisiDrzavu", new { id = item.Id }, new { @class = "btn btn-danger" })
+                            </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

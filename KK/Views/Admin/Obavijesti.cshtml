@@ -1,0 +1,13 @@
+﻿@model IEnumerable<KK.ViewModels.AdminVM.ObavijestiVM>
+
+<h1>Obavijesti</h1>
+<p><a href="/Admin/DodajObavijest" class="btn btn-success">Dodaj novu obavijest</a></p>
+@foreach(var item in Model)
+{
+    <h2>@item.Naslov</h2>
+    <div>@Html.ActionLink("Uredi","UrediObavijest",new { id = item.ID },new{@class="btn btn-primary"})|
+    @Html.ActionLink("Brisi","BrisiObavijest",new { id = item.ID },new { @class = "btn btn-danger" })</div>
+    <h4>@item.Datum</h4>
+    <img src="@item.Slika"/>
+    <p>@item.Tekst</p>
+}

@@ -1,0 +1,16 @@
+﻿@model KK.ViewModels.AdminVM.ObavijestiVM
+
+<h1>Uredi obavijest : @Model.Naslov</h1>
+
+<form asp-action="UrediObavijest" method="post" enctype="multipart/form-data">
+    <label asp-for="Naslov"></label>
+    <input asp-for="Naslov" />
+    <label asp-for="Datum"></label>
+    <input asp-for="Datum" />
+    <label asp-for="Tekst"></label>
+    <input asp-for="Tekst" />
+    <label>Slika</label>
+    <input type="file" name="file" id="file" />
+    <input type="submit" value="Snimi" class="btn btn-primary" />
+</form>
+<p><a asp-action="Obavijesti">Nazad na obavijesti</a></p>

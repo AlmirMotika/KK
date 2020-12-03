@@ -1,0 +1,11 @@
+﻿@model KK.ViewModels.AdminVM.GradVM
+
+<h1>Dodaj grad</h1>
+
+<form asp-action="DodajGrad">
+    <label asp-for="Naziv"></label>
+    <input asp-for="Naziv" />
+    <input type="submit" value="Snimi" class="btn btn-primary" />
+</form>
+<div><a asp-action="Gradovi">Nazad na listu</a></div>
+

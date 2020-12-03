@@ -1,0 +1,11 @@
+﻿@model KK.ViewModels.AdminVM.TipLinijeVM
+
+<h1>Dodaj tip linije</h1>
+
+<form asp-action="DodajTipLinije">
+    <label asp-for="Naziv"></label>
+    <input asp-for="Naziv" />
+    <input type="submit" value="Snimi" />
+
+</form>
+<p><a asp-action="TipLinije">Nazad na tip linije</a></p>

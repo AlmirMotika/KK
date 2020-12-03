@@ -1,0 +1,20 @@
+﻿@model KK.ViewModels.VoznjaVM.DodajVoznjuVM
+
+<h1>Dodaj voznju</h1>
+
+<form asp-action="Dodajvoznju" method="post">
+    <label asp-for="Radnici"></label>
+    <select asp-for="RadnikID" asp-items="@Model.Radnici">
+        <option value="" selected disabled>Radnik</option>
+    </select>
+    <label asp-for="Linije"></label>
+    <select asp-for="LinijaID" asp-items="@Model.Linije">
+        <option value="" selected disabled>Linija</option>
+    </select>
+    <label asp-for="Vozila"></label>
+    <select asp-for="VoziloID" asp-items="@Model.Vozila">
+        <option value="" selected disabled>Vozilo</option>
+    </select>
+    <input type="submit" value="Snimi" />
+</form>
+<p><a asp-action="Voznje">Nazad na voznje</a></p>

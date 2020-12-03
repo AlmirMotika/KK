@@ -1,0 +1,28 @@
+﻿@model IEnumerable<KK.ViewModels.AdminVM.GradVM>
+
+<h1>Gradovi</h1>
+<p><a href="/Admin/DodajGrad" class="btn btn-success">Dodaj grad</a></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Naziv</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ID)</td>
+            <td>@Html.DisplayFor(modelItem => item.Naziv)</td>
+            <td>
+                @Html.ActionLink("Uredi", "UrediGrad", new { id = item.ID }, new { @class = "btn btn-primary" })|
+                        @Html.ActionLink("Briši", "BrisiGrad", new { id = item.ID }, new { @class = "btn btn-danger" })
+                    </td>
+
+
+        </tr>
+        }
+    </tbody>
+</table>

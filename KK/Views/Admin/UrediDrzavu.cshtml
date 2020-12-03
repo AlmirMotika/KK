@@ -1,0 +1,11 @@
+﻿@model KK.ViewModels.AdminVM.DrzavaVM
+
+<h1>Uredi državu : @Model.Naziv</h1>
+
+<form asp-action="UrediDrzavu">
+    <label asp-for="Naziv"></label>
+    <input asp-for="Naziv" />
+    <input type="submit" value="Snimi" class="btn btn-primary" />
+</form>
+<div><a asp-action="Drzave">Nazad na listu</a></div>
+

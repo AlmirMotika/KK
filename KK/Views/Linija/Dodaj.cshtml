@@ -1,0 +1,27 @@
+﻿@model KK.ViewModels.LinijaVM.DodajLinijuVM
+
+<h1>Dodaj liniju</h1>
+<form asp-action="Dodaj" method="post">
+    <label asp-for="Polaziste"></label>
+    <select asp-for="PolazisteID" asp-items="@Model.Polaziste">
+        <option value="" selected disabled>Polaziste</option>
+    </select>
+    <label asp-for="Odrediste"></label>
+    <select asp-for="OdredisteID" asp-items="@Model.Odrediste">
+        <option value="" selected disabled>Odrediste</option>
+    </select>
+    <label asp-for="VrijemePolaska"></label>
+    <input asp-for="VrijemePolaska" />
+    <label asp-for="VrijemeDolaska"></label>
+    <input asp-for="VrijemeDolaska" />
+    <label asp-for="DuzinaPutovanja"></label>
+    <input asp-for="DuzinaPutovanja" />
+    <label asp-for="Linije"></label>
+    <select asp-for="LinijeID" asp-items="@Model.Linije">
+        <option value="" selected disabled>Linije</option>
+    </select>
+    <label asp-for="Cijena"></label>
+    <input asp-for="Cijena" />
+    <input type="submit" value="Snimi" />
+</form>
+<p><a href="/Linija/Linije">Nazad na linije</a></p>

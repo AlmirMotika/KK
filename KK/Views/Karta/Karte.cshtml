@@ -1,0 +1,30 @@
+﻿@model IEnumerable<KK.ViewModels.Kartavm.KartaVM>
+
+<h1>Karte kupljene</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cijena</th>
+            <th>Voznja</th>
+            <th>Vlasnik</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ID)</td>
+            <td>@Html.DisplayFor(modelItem => item.Cijena)</td>
+            <td>@Html.DisplayFor(modelItem => item.Voznja)</td>
+            <td>@Html.DisplayFor(modelItem => item.Vlasnik)</td>
+
+
+        </tr>
+}
+
+    </tbody>
+</table>

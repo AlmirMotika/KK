@@ -1,0 +1,15 @@
+﻿@model KK.ViewModels.AdminVM.DodajVoziloVM
+
+<h1>Dodaj vozilo</h1>
+
+<form asp-action="DodajVozilo" method="post">
+    <label asp-for="RegistracijskaOznaka"></label>
+    <input asp-for="RegistracijskaOznaka" />
+    <select asp-for="TipoviID" asp-items="@Model.Tipovi">
+        <option value="" selected disabled>Tip</option>
+    </select>
+    <label asp-for="GodisteVozila"></label>
+    <input asp-for="GodisteVozila" />
+    <input type="submit" value="Snimi" />
+</form>
+<p><a asp-action="Vozila">Nazad na vozila</a></p>
